@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+    <title>Grid Layout Example</title>
+    <style>
+<style>
+body {
+    background-color: grey;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Equal width columns for desktop */
+    grid-gap: 10px;
+    padding: 20px;
+    grid-row: 2;
+}
+
+.grid-item {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Header */
+.header {
+    background-color: darkkhaki;
+    grid-column: span 3;
+}
+
+/* Navigation */
+.nav {
+    background-color: rgb(172, 59, 228);
+}
+
+/* Article */
+.article {
+    background-color: rgb(206, 156, 30);
+}
+
+/* Aside */
+.aside {
+    background-color: rgb(172, 59, 228);
+}
+
+/* Footer */
+.footer {
+    background-color: darkkhaki;
+    grid-column: span 3;
+}
+
+/* Media Query for Screens 767px and Below */
+@media screen and (max-width: 767px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+</style>
+
+
+</style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="grid-item header">Header</header>
+        <nav class="grid-item nav">Navigation</nav>
+        <article class="grid-item article">Article</article>
+        <aside class="grid-item aside">Aside</aside>
+        <footer class="grid-item footer">Footer</footer>
+    </div>
+</body>
+</html>
